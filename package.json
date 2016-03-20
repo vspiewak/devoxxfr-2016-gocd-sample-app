@@ -9,7 +9,10 @@
     "start": "node devServer.js",
     "lint": "eslint src",
     "test": "cross-env NODE_ENV=test mocha --recursive --compilers js:babel-register --require ./test/unit/utils.js",
-    "test:watch": "npm test -- --watch"
+    "test:watch": "npm test -- --watch",
+    "e2e": "nightwatch -c nightwatch.e2e.conf.js",
+    "e2e:smoke": "nightwatch -c nightwatch.e2e.conf.js --group smoke",
+    "e2e:dashboard": "nightwatch -c nightwatch.e2e.conf.js --group landing"
   },
   "repository": {
     "type": "git",
@@ -42,6 +45,7 @@
     "babel-preset-react": "^6.3.13",
     "babel-preset-react-hmre": "^1.1.1",
     "chai": "^3.5.0",
+    "chromedriver": "^2.21.2",
     "cross-env": "^1.0.7",
     "enzyme": "^2.1.0",
     "eslint": "^1.10.3",
@@ -53,6 +57,7 @@
     "mocha": "^2.4.5",
     "react-addons-test-utils": "^0.14.7",
     "rimraf": "^2.4.3",
+    "selenium-server-standalone-jar": "^2.53.0",
     "webpack": "^1.12.9",
     "webpack-dev-middleware": "^1.4.0",
     "webpack-hot-middleware": "^2.9.1"
