@@ -6,6 +6,8 @@
     "clean": "rimraf dist",
     "build:webpack": "cross-env NODE_ENV=production webpack --config webpack.config.prod.js",
     "build": "npm run clean && npm run build:webpack",
+    "package": "zip -r pkg.$PKG_ID.zip index.html dist",
+    "dist": "zip -r dist.$DIST_ID.zip * -x '.git*'",
     "start": "node devServer.js",
     "lint": "eslint src",
     "test": "cross-env NODE_ENV=test mocha --recursive --compilers js:babel-register --require ./test/unit/utils.js",
