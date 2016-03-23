@@ -1,5 +1,6 @@
-var seleniumServer = require('selenium-server-standalone-jar');
-var chromedriver = require('chromedriver');
+var seleniumServer = require('selenium-server-standalone-jar')
+  , chromedriver = require('chromedriver')
+  , phantomjs = require('phantomjs-prebuilt');
 
 var launchUrl = (process.env.LAUNCH_URL) ? process.env.LAUNCH_URL : 'http://localhost:3000';
 
@@ -33,9 +34,10 @@ module.exports = {
         path: '.screenshots'
       },
       desiredCapabilities: {
-        browserName: 'chrome',
+        browserName: 'phantomjs',
         javascriptEnabled: true,
-        acceptSslCerts: true
+        acceptSslCerts: true,
+        'phantomjs.binary.path' : phantomjs.path
       }
     },
 
@@ -43,12 +45,13 @@ module.exports = {
         desiredCapabilities: {
             browserName: 'chrome',
             javascriptEnabled: true,
-            acceptSslCerts: true
-        },
-        selenium : {
-          cli_args : {
-            'webdriver.chrome.driver': chromedriver.path
-          }
+            acceptSslCerts: true,
+            chromeOptions: {
+              args: ['--no-sandbox']
+            },
+            cli_args: {
+              'webdriver.chrome.driver': chromedriver.path
+            }
         }
     },
 
@@ -59,5 +62,6 @@ module.exports = {
           acceptSslCerts: true
         }
     }
+
   }
 };
