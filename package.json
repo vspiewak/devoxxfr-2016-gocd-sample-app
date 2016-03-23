@@ -14,7 +14,9 @@
     "test:watch": "npm test -- --watch",
     "e2e": "nightwatch -c nightwatch.e2e.conf.js",
     "e2e:smoke": "nightwatch -c nightwatch.e2e.conf.js --group smoke",
-    "e2e:dashboard": "nightwatch -c nightwatch.e2e.conf.js --group landing"
+    "e2e:dashboard": "nightwatch -c nightwatch.e2e.conf.js --group landing",
+    "sitespeed:desktop": "sitespeed.io --profile desktop --screenshot --outputFolderName desktop",
+    "sitespeed:mobile": "sitespeed.io --profile mobile --screenshot --outputFolderName mobile"
   },
   "repository": {
     "type": "git",
@@ -62,6 +64,7 @@
     "react-addons-test-utils": "^0.14.7",
     "rimraf": "^2.4.3",
     "selenium-server-standalone-jar": "^2.53.0",
+    "sitespeed.io": "^3.11.5",
     "webpack": "^1.12.9",
     "webpack-dev-middleware": "^1.4.0",
     "webpack-hot-middleware": "^2.9.1"
