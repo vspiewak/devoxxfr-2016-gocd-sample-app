@@ -15,6 +15,7 @@
     "e2e": "nightwatch -c nightwatch.e2e.conf.js",
     "e2e:smoke": "nightwatch -c nightwatch.e2e.conf.js --group smoke",
     "e2e:dashboard": "nightwatch -c nightwatch.e2e.conf.js --group landing",
+    "plato": "plato -r -d reports src",
     "sitespeed:desktop": "sitespeed.io --profile desktop --screenshot --suppressDomainFolder --outputFolderName sitespeed.io-desktop",
     "sitespeed:mobile": "sitespeed.io --profile mobile --screenshot --suppressDomainFolder --outputFolderName sitespeed.io-mobile"
   },
@@ -61,6 +62,7 @@
     "mocha": "^2.4.5",
     "nightwatch": "^0.8.18",
     "phantomjs-prebuilt": "^2.1.6",
+    "plato": "git+https://github.com/deedubs/es6-plato.git",
     "react-addons-test-utils": "^0.14.7",
     "rimraf": "^2.4.3",
     "selenium-server-standalone-jar": "^2.53.0",
