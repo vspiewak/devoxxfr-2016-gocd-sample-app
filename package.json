@@ -15,8 +15,8 @@
     "e2e": "nightwatch -c nightwatch.e2e.conf.js",
     "e2e:smoke": "nightwatch -c nightwatch.e2e.conf.js --group smoke",
     "e2e:dashboard": "nightwatch -c nightwatch.e2e.conf.js --group landing",
-    "sitespeed:desktop": "sitespeed.io --profile desktop --screenshot --outputFolderName desktop",
-    "sitespeed:mobile": "sitespeed.io --profile mobile --screenshot --outputFolderName mobile"
+    "sitespeed:desktop": "sitespeed.io --profile desktop --screenshot --suppressDomainFolder --outputFolderName desktop",
+    "sitespeed:mobile": "sitespeed.io --profile mobile --screenshot --suppressDomainFolder --outputFolderName mobile"
   },
   "repository": {
     "type": "git",
