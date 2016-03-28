@@ -126,6 +126,3 @@ You can discuss React Transform and related projects in **#react-transform** cha
 
 CC0 (public domain)
 
-## GitHub Pull Request Integration
-
-Fake pull request
