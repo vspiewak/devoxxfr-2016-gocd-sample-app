@@ -19,6 +19,7 @@
     "bdd": "nightwatch -c nightwatch.bdd.conf.js",
     "bdd:smoke": "nightwatch -c nightwatch.bdd.conf.js --group smoke",
     "bdd:landing": "nightwatch -c nightwatch.bdd.conf.js --group landing",
+    "coverage": "babel-node node_modules/isparta/bin/isparta cover _mocha --include-all-sources --report lcov --require ./test/unit/utils.js",
     "plato": "plato -r -d reports src",
     "sitespeed:desktop": "sitespeed.io --profile desktop --screenshot --suppressDomainFolder --outputFolderName sitespeed.io-desktop",
     "sitespeed:mobile": "sitespeed.io --profile mobile --screenshot --suppressDomainFolder --outputFolderName sitespeed.io-mobile"
@@ -47,6 +48,7 @@
   },
   "homepage": "https://github.com/vspiewak/react-redux-boilerplate",
   "devDependencies": {
+    "babel-cli": "6.6.5",
     "babel-core": "6.7.4",
     "babel-eslint": "6.0.0",
     "babel-loader": "6.2.4",
@@ -63,6 +65,7 @@
     "eslint-plugin-react": "4.2.3",
     "eventsource-polyfill": "0.9.6",
     "express": "4.13.4",
+    "isparta": "4.0.0",
     "jsdom": "8.1.0",
     "mocha": "2.4.5",
     "nightwatch": "0.8.18",

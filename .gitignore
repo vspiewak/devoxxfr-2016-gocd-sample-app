@@ -5,3 +5,4 @@ selenium-debug.log
 dist
 .reports
 .screenshots
+coverage
