@@ -19,7 +19,7 @@
     "bdd": "nightwatch -c nightwatch.bdd.conf.js",
     "bdd:smoke": "nightwatch -c nightwatch.bdd.conf.js --group smoke",
     "bdd:landing": "nightwatch -c nightwatch.bdd.conf.js --group landing",
-    "coverage": "babel-node node_modules/isparta/bin/isparta cover _mocha --include-all-sources --report lcov --require ./test/unit/utils.js",
+    "coverage": "babel-node node_modules/isparta/bin/isparta cover _mocha --root ./src --include-all-sources --default-excludes  -- --recursive './test/**/*.spec.js' --report lcov --require ./test/unit/utils.js",
     "plato": "plato -r -d reports src",
     "sitespeed:desktop": "sitespeed.io --profile desktop --screenshot --suppressDomainFolder --outputFolderName sitespeed.io-desktop",
     "sitespeed:mobile": "sitespeed.io --profile mobile --screenshot --suppressDomainFolder --outputFolderName sitespeed.io-mobile"
