@@ -84,7 +84,7 @@ However, you can use WebpackDevServer instead of the custom server just fine.
 
 #### I don’t see the syntax error overlay
 
-Make sure your react-app is not attached to `document.body`. The client overlay provided by [webpack-hot-middleware](https://github.com/glenjamin/webpack-hot-middleware) will render into `document.body`. 
+Make sure your react-app is not attached to `document.body`. The client overlay provided by [webpack-hot-middleware](https://github.com/glenjamin/webpack-hot-middleware) will render into `document.body`.
 
 Attaching the React root node to `document.body` requires extra caution, as many third-party packages will append their markup to the body as well. React will replace the entire contents in the body on every re-render. Thus, you will not see the additional markup.
 
@@ -94,7 +94,7 @@ It’s always better to render your React app in a `#root` DOM element.
 import React from 'react'
 import { render } from 'react-dom'
 import { App } from 'app'
-     
+
 render(<App />, document.getElementById('root'))
 ```
 
